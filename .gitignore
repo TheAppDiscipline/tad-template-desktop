@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Rust / Tauri build
+src-tauri/target/
+
+# Environment
+.env
+.env.*
+!.env.example
+!.env.example.supabase
+!.env.example.firebase
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Test results
+test-results/
+
+# Discipline Loop backups (auto-generated)
+.discipline/backups/
+
+# Logs
+*.log
+npm-debug.log*
