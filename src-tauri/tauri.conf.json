@@ -10,7 +10,6 @@
     "frontendDist": "../dist"
   },
   "app": {
-    "title": "Discipline Loop Desktop Template",
     "windows": [
       {
         "title": "Discipline Loop Desktop Template",
