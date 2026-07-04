@@ -1,4 +1,7 @@
-# run-log.md — Append-only execution log
+# run-log.md
 
-| Date | Step | Tool | Model | Packets Used | Notes |
-|------|------|------|-------|-------------|-------|
+Cumulative record of Discipline Loop pipeline runs. Keep entries short and evidence-based.
+
+| Date | Step | Tool | Inputs | Outputs | Notes |
+|---|---|---|---|---|---|
+| 2026-04-19 | 0 | Template | initial scaffold | tad-template-desktop v0.1.0 | Desktop lane promoted to production readiness review. |

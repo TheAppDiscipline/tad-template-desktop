@@ -6,7 +6,7 @@ echo "Discipline Loop monthly maintenance (desktop) — $(date +%Y-%m-%d)"
 echo ""
 
 echo "=== 1/6 Backups verification ==="
-echo "Manual: backend dashboard → Backups → last <24h?"
+echo "Manual: backend dashboard -> Backups -> last <24h?"
 echo ""
 
 echo "=== 2/6 Bundle audit ==="

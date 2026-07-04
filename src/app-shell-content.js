@@ -1,25 +1,25 @@
 export const TEMPLATE_CHECKS = [
-    'Define PROJECT_NAME, PRIMARY_GOAL y contratos base en discipline.md.',
-    'Cierra Slice 0: instala el SDK del provider elegido y pasa backend:smoke.',
-    'Configura identifier, productName y window title en src-tauri/tauri.conf.json.',
-    'Genera iconos con npm run tauri icon antes del primer build.',
+    'Define PROJECT_NAME, PRIMARY_GOAL, and base contracts in discipline.md.',
+    'Close Slice 0: install the selected provider SDK and pass backend:smoke.',
+    'Configure identifier, productName, and window title in src-tauri/tauri.conf.json.',
+    'Generate icons with npm run tauri icon before the first build.',
 ]
 
 export const TEMPLATE_STRENGTHS = [
     {
         title: 'Contracts First',
         description:
-            'La shell ya está alineada para empezar por datos, estados y DoD antes de escribir lógica de negocio.',
+            'The shell is already aligned to start from data, states, and DoD before writing business logic.',
     },
     {
         title: 'Backend Factory',
         description:
-            'El adapter común te deja cambiar de provider sin reescribir la superficie principal de la app.',
+            'The shared adapter lets you switch providers without rewriting the main app surface.',
     },
     {
         title: 'Native via Tauri',
         description:
-            'Acceso al OS (filesystem, procesos, ventanas) a través de IPC tipado en Rust — sin Electron ni Node en runtime.',
+            'OS access (filesystem, processes, windows) through typed Rust IPC, without Electron or Node at runtime.',
     },
 ]
 
@@ -27,21 +27,21 @@ export const TEMPLATE_STATE_CARDS = [
     {
         state: 'loading',
         title: 'Loading',
-        description: 'Usa skeleton, copy breve y evita parpadeo mientras el source of truth responde.',
+        description: 'Use a skeleton, brief copy, and avoid flicker while the source of truth responds.',
     },
     {
         state: 'empty',
         title: 'Empty',
-        description: 'El primer uso explica qué falta crear y cuál es la siguiente acción segura.',
+        description: 'The first-use state explains what is missing and the next safe action.',
     },
     {
         state: 'error',
         title: 'Error',
-        description: 'Todo fallo debe tener recovery claro, retry manual y mensaje accionable.',
+        description: 'Every failure needs clear recovery, manual retry, and an actionable message.',
     },
     {
         state: 'normal',
         title: 'Normal',
-        description: 'El flujo principal solo aparece cuando contratos, provider y estados base ya están listos.',
+        description: 'The main flow appears only when contracts, provider, and base states are ready.',
     },
 ]

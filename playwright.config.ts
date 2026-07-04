@@ -1,8 +1,8 @@
 import { defineConfig, devices } from '@playwright/test'
 
-// E2E smoke contra el webview React + Vite (sin shell Tauri).
-// Para tests del shell nativo (file system, native menus, IPC), usar @tauri-apps/api en
-// tests separados; este config cubre solo la capa visual + UI states.
+// E2E smoke against the React + Vite webview (without the Tauri shell).
+// For native shell tests (file system, native menus, IPC), use @tauri-apps/api in
+// separate tests; this config covers only the visual layer + UI states.
 export default defineConfig({
   testDir: './tests/e2e',
   timeout: 30_000,
