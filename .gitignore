@@ -34,6 +34,13 @@ test-results/
 # Discipline Loop backups (auto-generated)
 .discipline/backups/
 
+# Substrate runtime state — machine-local, not project artifacts (see AGENTS.md "Substrate")
+.discipline/locks/
+.discipline/ledger/
+.discipline/review/
+.discipline/STOP
+.discipline/gate-report.json
+
 # Logs
 *.log
 npm-debug.log*
