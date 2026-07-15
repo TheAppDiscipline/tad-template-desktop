@@ -24,6 +24,9 @@
 - PUSH_PLUGIN:
 - AI_FEATURES:
 - LANE: DESKTOP
+- STEP4_EXPANSION_MODE: batch
+- READY_PROMOTION: per_packet
+- DOCTRINE_VERSION: 1.0
 
 ## Env Configuration
 - VITE_BACKEND_PROVIDER: Provider selection.
