@@ -24,15 +24,14 @@ gh repo create my-app --template TheAppDiscipline/tad-template-desktop
 cd my-app
 npm install
 
-# 3. Configure environment
-cp .env.example .env
-
-# 4. Run the full Desktop gate
+# 3. Run the full Desktop gate
 npm run gate:full
 
-# 5. Launch desktop app in dev mode
+# 4. Launch desktop app in dev mode
 npm run tauri:dev
 ```
+
+The template starts with `LOCAL_ONLY`, so no `.env` is needed for the first run. `.env` holds credentials only after you choose a cloud backend in `discipline.md`.
 
 ## Recommended Operating Mode
 
@@ -60,17 +59,25 @@ npm run discipline:watch
 
 ## Backend Selection
 
-Set `VITE_BACKEND_PROVIDER` in `.env`:
+Choose the provider in `discipline.md`, then generate the versioned runtime contract:
+
+```bash
+npm run discipline:provider:generate
+```
+
+The initial contract is `LOCAL_ONLY` / `NONE` and works without credentials. Do not set `VITE_BACKEND_PROVIDER` or `VITE_AUTH_MODE`; those former architecture variables are rejected.
 
 | Value | SDK to install | Smoke test |
 |-------|---------------|------------|
-| `SUPABASE` (default) | `npm i @supabase/supabase-js` | `npm run db:smoke` |
+| `SUPABASE` | `npm i @supabase/supabase-js` | `npm run db:smoke` |
 | `FIREBASE` | `npm i firebase` | `npm run firebase:smoke` |
-| `LOCAL_ONLY` | — | `npm run backend:smoke` |
+| `LOCAL_ONLY` (initial) | — | `npm run backend:smoke` |
+
+After choosing a cloud provider, copy its credential example (`.env.example.supabase` or `.env.example.firebase`) to `.env`, fill the credentials, then run `npm run gate:integration`.
 
 ### Firebase Production Setup
 
-When `VITE_BACKEND_PROVIDER=FIREBASE`, install the Firebase SDK, configure `.env` from `.env.example.firebase`, and deploy the checked-in Firestore artifacts before running launch/prod smoke tests:
+When `discipline.md` selects `BACKEND_PROVIDER: FIREBASE`, install the Firebase SDK, configure `.env` from `.env.example.firebase`, and deploy the checked-in Firestore artifacts before running launch/prod smoke tests:
 
 ```bash
 firebase deploy --only firestore:rules,firestore:indexes
