@@ -15,7 +15,7 @@
 
 ## Next Actions
 - Install Rust toolchain if not present
-- Choose BACKEND_PROVIDER and run backend:smoke
+- Choose BACKEND_PROVIDER, run discipline:provider:generate, then run backend:smoke when credentials exist
 - Verify npm run tauri:dev opens correctly
 
 ## Deploy Notes
