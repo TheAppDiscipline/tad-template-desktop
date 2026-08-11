@@ -135,7 +135,8 @@ Every IPC command must be documented in `discipline.md` under `## 4) API / IO Sh
 ```bash
 npm run discipline:status       # show pipeline dashboard
 npm run discipline:metrics -- --slice S1 --base main  # record measured scope by category
-npm run discipline:state-view   # regenerate compact derived state (-- --json for structured output)
+npm run discipline:state-view   # regenerate compact derived state
+npm run --silent discipline -- state-view --json # JSON-only stdout (PowerShell: use npm.cmd)
 npm run discipline:patch        # apply pending patches
 npm run discipline:assemble     # assemble paste-ready file for next step
 npm run discipline:progress     # update progress.md
