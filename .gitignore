@@ -43,6 +43,7 @@ test-results/
 .discipline/locks/
 .discipline/ledger/
 .discipline/review/
+.discipline/views/
 .discipline/STOP
 .discipline/gate-report.json
 
