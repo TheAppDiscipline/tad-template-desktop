@@ -21,7 +21,7 @@
     "backend": ["lint", "typecheck", "test", "check-secrets", "check-rls", "check-cors", "check-https", "check-queries", "check-fk-indexes"],
     "schema": ["test", "migration:lint", "check-fk-indexes", "check-rls", "check-firebase"],
     "permissions": ["test", "check-rls", "check-firebase", "check-secrets"],
-    "deployment-artifact": ["lint", "typecheck", "test", "check-secrets", "check-https", "check-desktop-release"],
+    "deployment-artifact": ["lint", "typecheck", "test", "check-secrets", "check-https", "check-desktop-release", "check-native"],
     "ai": ["lint", "typecheck", "test", "ai:eval"],
     "docs-only": ["discipline:validate", "test"]
   },
