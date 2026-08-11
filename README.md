@@ -103,7 +103,9 @@ npm run tauri:build        # Production build (.exe / .dmg / .AppImage)
 npm run tauri:icon <png>   # Generate platform icons from 1024x1024 PNG
 ```
 
-Before launch/prod packaging, replace `identifier`, `productName`, and window title in `src-tauri/tauri.conf.json`, generate final icons, install Rust/Cargo, and run `npm run gate:strict` plus `npm run gate:full`. Commit `src-tauri/Cargo.lock` after the first native dependency resolution.
+Before launch/prod packaging, replace `identifier`, `productName`, and window title in `src-tauri/tauri.conf.json`, generate final icons, install Rust/Cargo, and run `npm run gate:strict` plus `npm run gate:full`.
+
+`src-tauri/Cargo.lock` ships with this template, already resolved: the native dependency tree is pinned from the first clone, so two machines build the same thing. `check-desktop-release` verifies it with `cargo metadata --locked`, which refuses a lockfile that is missing, hand-written, or stale against `Cargo.toml`. Keep it committed and let Cargo update it (`cargo update`, or any `cargo` command without `--locked`) when you change a dependency.
 
 ## IPC Pattern
 
