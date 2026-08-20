@@ -1,7 +1,7 @@
 # App icons
 
 These are **placeholder** icons (a neutral two-tone mark) so `npm run tauri:build`
-works out of the box — Tauri fails the build if the files referenced in
+works out of the box - Tauri fails the build if the files referenced in
 `tauri.conf.json > bundle.icon` are missing.
 
 Replace them with your own before shipping:

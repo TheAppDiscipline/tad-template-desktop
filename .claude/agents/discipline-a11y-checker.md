@@ -28,8 +28,8 @@ Tauri apps use a webview, so axe-core works but the preview workflow is differen
 
 - Confirm the app works with OS-level magnification (Zoom on macOS, Magnifier on Windows).
 - Confirm keyboard shortcuts work (Tab, Enter, Escape) and respect OS conventions (Cmd+W close window on macOS, Alt+F4 on Windows).
-- High-contrast themes on Windows should render the app without breaking its own color system — test with "High Contrast" enabled.
-- Screen readers on desktop: NVDA (Windows), VoiceOver (macOS), Orca (Linux) — test once before Gate D.
+- High-contrast themes on Windows should render the app without breaking its own color system - test with "High Contrast" enabled.
+- Screen readers on desktop: NVDA (Windows), VoiceOver (macOS), Orca (Linux) - test once before Gate D.
 
 ## Output
 

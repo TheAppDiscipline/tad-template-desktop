@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# .discipline-os/monthly.sh — Discipline Loop monthly (desktop/Tauri)
+# .discipline-os/monthly.sh - Discipline Loop monthly (desktop/Tauri)
 set -e
 
-echo "Discipline Loop monthly maintenance (desktop) — $(date +%Y-%m-%d)"
+echo "Discipline Loop monthly maintenance (desktop) - $(date +%Y-%m-%d)"
 echo ""
 
 echo "=== 1/6 Backups verification ==="
@@ -18,7 +18,7 @@ echo ""
 
 echo "=== 3/6 Signing certificate check ==="
 echo "Manual checks:"
-echo "  - macOS: 'security find-identity -p codesigning -v' — any cert expiring <60 days?"
+echo "  - macOS: 'security find-identity -p codesigning -v' - any cert expiring <60 days?"
 echo "  - Windows: check cert expiration in your signing vendor dashboard (Sectigo, DigiCert, etc.)."
 echo "  - Linux: AppImage signing if applicable (GPG key expiration)."
 echo ""

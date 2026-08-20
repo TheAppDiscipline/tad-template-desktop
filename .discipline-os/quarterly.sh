@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# .discipline-os/quarterly.sh — Discipline Loop quarterly (desktop/Tauri)
+# .discipline-os/quarterly.sh - Discipline Loop quarterly (desktop/Tauri)
 set -e
 
-echo "Discipline Loop quarterly maintenance (desktop) — $(date +%Y-%m-%d)"
+echo "Discipline Loop quarterly maintenance (desktop) - $(date +%Y-%m-%d)"
 echo "Timebox: 1 hour."
 echo ""
 

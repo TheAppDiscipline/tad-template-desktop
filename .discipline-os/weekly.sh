@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# .discipline-os/weekly.sh — Discipline Loop weekly maintenance (desktop)
+# .discipline-os/weekly.sh - Discipline Loop weekly maintenance (desktop)
 set -e
 
-echo "Discipline Loop weekly maintenance — $(date +%Y-%m-%d)"
+echo "Discipline Loop weekly maintenance - $(date +%Y-%m-%d)"
 echo ""
 
 echo "=== 1/5 Outdated deps ==="

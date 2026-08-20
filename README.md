@@ -2,12 +2,37 @@
 
 > Discipline Loop factory template for native desktop apps with **Tauri v2 + React 19 + Vite + TypeScript (strict) + Rust**.
 
-**Part of The App Discipline.** This is the public, MIT-licensed template (see `LICENSE`). The complete Discipline Loop methodology and vault (full system, playbooks, prompts, and extended materials) are a separate product, sold separately at <https://theappdiscipline.gumroad.com/l/tad>, and are **not** included in this repository.
+**Part of The App Discipline.** This template is MIT-licensed (see `LICENSE`) and can be used on its own. The proprietary Discipline Loop vault is not covered by this repository's MIT license. If you received the paid bundle, the vault is the sibling folder `The App Discipline Vault/`; otherwise, verify the current offer and availability in the seller's checkout before relying on it.
+
+## Inicio rápido desde el bundle
+
+Usa esta ruta si recibiste `Templates/tad-template-desktop` dentro del bundle de The App Discipline:
+
+1. Copia esta carpeta completa a una carpeta de trabajo nueva. No trabajes dentro del bundle ni combines la copia con un proyecto anterior.
+2. Abre una terminal en la copia. El directorio correcto contiene `package.json`.
+3. Ejecuta, en orden:
+
+```bash
+npm install
+npm run discipline:hydrate -- --lane DESKTOP --profile LITE --backend LOCAL_ONLY --auth NONE --sync NONE
+npm run discipline:status
+npm run gate
+```
+
+En Windows PowerShell usa `npm.cmd` en lugar de `npm`. Si ves `npm.ps1 cannot be loaded`, repite el mismo comando con `npm.cmd`; no necesitas cambiar la política del sistema.
+
+**Resultado esperado:** hydrate informa `Project hydrated`, status termina en `Status: OK` y gate vuelve al prompt sin error. Este gate demuestra el frontend y los guardianes locales. No demuestra compilación Rust, ventana nativa, firma, instalador ni otro sistema operativo.
+
+**Siguiente prueba manual:** instala Rust y las herramientas de plataforma descritas en `Prerequisites`, corre `npm run gate:full` y después `npm run tauri:dev`. Si no tienes una plataforma o firma, marca ese resultado como no verificado.
+
+**Si falla:** conserva el primer error rojo y el comando exacto. Corre `npm run discipline:doctor` (`npm.cmd run discipline:doctor` en PowerShell), corrige una causa a la vez y repite. Después de dos intentos sin información nueva, detente y registra el blocker en `progress.md`.
+
+Para volver otro día, lee `progress.md` y corre `npm run discipline:status`. `LITE` es local; `LAUNCH` requiere evidencia antes de abrir a terceros; `PROD` requiere operación comercial verificada. La IA no decide por ti alcance, costos, credenciales, legal/fiscal, cobros, firma ni publicación.
 
 ## Prerequisites
 
 - **Node.js** >= 22
-- **Rust** toolchain (`rustc`, `cargo`) — [install from rustup.rs](https://rustup.rs/)
+- **Rust** toolchain (`rustc`, `cargo`) - [install from rustup.rs](https://rustup.rs/)
 - **Platform build tools:**
   - **Windows:** MSVC Build Tools (Visual Studio)
   - **macOS:** Xcode Command Line Tools
@@ -71,7 +96,7 @@ The initial contract is `LOCAL_ONLY` / `NONE` and works without credentials. Do 
 |-------|---------------|------------|
 | `SUPABASE` | `npm i @supabase/supabase-js` | `npm run db:smoke` |
 | `FIREBASE` | `npm i firebase` | `npm run firebase:smoke` |
-| `LOCAL_ONLY` (initial) | — | `npm run backend:smoke` |
+| `LOCAL_ONLY` (initial) | - | `npm run backend:smoke` |
 
 After choosing a cloud provider, copy its credential example (`.env.example.supabase` or `.env.example.firebase`) to `.env`, fill the credentials, then run `npm run gate:integration`.
 
@@ -207,6 +232,6 @@ progress.md                   # Current state + logs
 - **One writer per slice:** never have two agents editing the same slice
 - **Semantic tokens:** no hex colors outside `tokens.css` (enforced by gate)
 - **Gates before merge:** `npm run gate:full` must pass before any commit
-- **Anchor rules:** never rename headings in canonical files — scripts depend on them
+- **Anchor rules:** never rename headings in canonical files - scripts depend on them
 - **IPC contract:** every Rust command documented in `discipline.md` with typed wrapper in `native.ts`
 - **Minimum privilege:** only request OS capabilities the app actually uses

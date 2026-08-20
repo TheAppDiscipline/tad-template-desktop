@@ -5,7 +5,7 @@
   etc.); the discipline:patch scripts depend on the exact heading text.
 -->
 
-# discipline.md — Project Constitution
+# discipline.md - Project Constitution
 
 ## 0) Profile
 - PROJECT_NAME:
@@ -57,7 +57,7 @@ Rule: ANON_KEY only in frontend. Service role key never in frontend.
 
 ## 4) API / IO Shapes
 ### IPC Commands (Frontend ↔ Rust)
-- `greet(name: string) -> string` — Example command (remove in Slice 1)
+- `greet(name: string) -> string` - Example command (remove in Slice 1)
 
 ## 5) Sync Rules
 - N/A

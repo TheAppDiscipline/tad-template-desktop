@@ -1,4 +1,4 @@
-# .discipline-os/ — Maintenance Automation (Discipline Loop)
+# .discipline-os/ - Maintenance Automation (Discipline Loop)
 
 Scripts to keep solo-builder maintenance from becoming "intention without habit". The doctrine behind them lives in The App Discipline vault (sold separately).
 
@@ -28,7 +28,7 @@ Add these entries to your `package.json` under `scripts`:
 
 - `weekly.sh`: also runs `cargo check --manifest-path src-tauri/Cargo.toml` if Rust project detected.
 - `monthly.sh`: verifies signing certificates are not expiring (macOS notarization cert, Windows code-signing cert).
-- `quarterly.sh`: additional breach scenarios — IPC command injection, path traversal via `fs.readFile` Tauri command.
+- `quarterly.sh`: additional breach scenarios - IPC command injection, path traversal via `fs.readFile` Tauri command.
 
 ## Windows compatibility
 
